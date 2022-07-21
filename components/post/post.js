@@ -2,6 +2,7 @@ import { Card, Box } from '@mui/material';
 import ExternalLink from './externalLink';
 import ThumbUpIcon from '@mui/icons-material/ThumbUp';
 import UpvoteList from './upvoteList';
+import CommentList from './commentList';
 
 export default function Post({ post }) {
   return (
@@ -12,6 +13,7 @@ export default function Post({ post }) {
           <Box>
             <ThumbUpIcon />
             <UpvoteList votes={post.votes} />
+            {post.comments && <CommentList comments={post.comments} />}
           </Box>
         </Card>
       )}
